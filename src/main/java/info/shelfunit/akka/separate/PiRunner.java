@@ -9,10 +9,10 @@ import akka.routing.RoundRobinRouter;
 import akka.util.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class Pi2 {
+public class PiRunner {
 
     public static void main(String[] args) {
-	Pi2 pi = new Pi2();
+	PiRunner pi = new PiRunner();
 	pi.calculate(4, 10000, 10000);
     }
 
