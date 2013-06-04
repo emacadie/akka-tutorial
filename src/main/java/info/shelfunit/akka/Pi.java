@@ -1,12 +1,12 @@
 package info.shelfunit.akka;
-
+/*
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
 import akka.actor.UntypedActorFactory;
 import akka.routing.RoundRobinRouter;
-import akka.util.Duration;
+// import akka.util.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Pi {
@@ -126,6 +126,7 @@ public class Pi {
 		    Duration duration = Duration.create(System.currentTimeMillis() - start, 
 							TimeUnit.MILLISECONDS);
 		    listener.tell(new PiApproximation(pi, duration), getSelf());
+
 		    // Stops this actor and all its supervised children
 		    getContext().stop(getSelf());
 		}
@@ -183,5 +184,5 @@ public class Pi {
 
 
 }
-
+*/
 // EOF

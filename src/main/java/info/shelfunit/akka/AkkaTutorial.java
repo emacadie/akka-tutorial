@@ -4,7 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
-import akka.dispatch.Future;
+import akka.dispatch.Futures;
 import akka.dispatch.OnSuccess;
 import static akka.pattern.Patterns.ask;
 
