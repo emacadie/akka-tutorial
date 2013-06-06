@@ -31,4 +31,4 @@ java -cp /home/ericm/.m2/repository/org/scala-lang/scala-library/2.9.1-1/scala-l
 info.shelfunit.akka.separate.PiRunner
 
 
-
+Akka Migration Guide: http://doc.akka.io/docs/akka/2.1.0/project/migration-guide-2.0.x-2.1.x.html   

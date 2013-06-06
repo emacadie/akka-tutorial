@@ -1,7 +1,6 @@
 package info.shelfunit.akka.separate;
 
-import akka.util.Duration;
-
+import scala.concurrent.duration.Duration;
 
     public final class PiApproximation {
 	private final double pi;
