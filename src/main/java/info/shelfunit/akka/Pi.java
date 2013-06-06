@@ -6,7 +6,11 @@ import akka.actor.Props;
 import akka.actor.UntypedActor;
 import akka.actor.UntypedActorFactory;
 import akka.routing.RoundRobinRouter;
+<<<<<<< HEAD
 // import akka.util.Duration;
+=======
+import scala.concurrent.duration.Duration;
+>>>>>>> working
 import java.util.concurrent.TimeUnit;
 
 public class Pi {

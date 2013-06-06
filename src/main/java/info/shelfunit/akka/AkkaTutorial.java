@@ -4,7 +4,11 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
+<<<<<<< HEAD
 import akka.dispatch.Futures;
+=======
+import scala.concurrent.Future;
+>>>>>>> working
 import akka.dispatch.OnSuccess;
 import static akka.pattern.Patterns.ask;
 
@@ -33,13 +37,13 @@ public class AkkaTutorial {
         counter.tell("tick");
 
         Future future = ask(counter, "get", 5000);
-
+	/*
         future.onSuccess(new OnSuccess<Integer>() {
 		public void onSuccess(Integer count) {
 		    System.out.println("Count is " + count);
 		}
 	    });
-
+	*/
         system.shutdown();
     }
 }

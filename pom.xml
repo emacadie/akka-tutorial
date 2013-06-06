@@ -10,7 +10,7 @@
   <name>Akka Tutorial</name>
 
   <properties>
-    <akka.version>2.0.1</akka.version>
+    <akka.version>2.1.4</akka.version>
   </properties>
 
   <repositories>
@@ -24,6 +24,7 @@
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor_2.10</artifactId>
+<<<<<<< HEAD
       <version>2.1.4</version>
     </dependency>
 
@@ -31,10 +32,14 @@
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor</artifactId>
+=======
+>>>>>>> working
       <version>${akka.version}</version>
     </dependency>
 -->
   </dependencies>
+
+
 
   <build>
     <plugins>

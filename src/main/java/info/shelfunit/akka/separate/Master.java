@@ -6,7 +6,7 @@ import akka.actor.UntypedActor;
 
 import akka.routing.RoundRobinRouter;
 
-import akka.util.Duration;
+import scala.concurrent.duration.Duration;
 import java.util.concurrent.TimeUnit;
 
 public final class Master extends UntypedActor {
