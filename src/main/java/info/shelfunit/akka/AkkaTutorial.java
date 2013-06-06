@@ -4,11 +4,9 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
-<<<<<<< HEAD
-import akka.dispatch.Futures;
-=======
+
 import scala.concurrent.Future;
->>>>>>> working
+
 import akka.dispatch.OnSuccess;
 import static akka.pattern.Patterns.ask;
 

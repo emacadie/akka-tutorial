@@ -24,16 +24,13 @@
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor_2.10</artifactId>
-<<<<<<< HEAD
-      <version>2.1.4</version>
+      <version>${akka.version}</version>
     </dependency>
 
 <!--
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor</artifactId>
-=======
->>>>>>> working
       <version>${akka.version}</version>
     </dependency>
 -->
