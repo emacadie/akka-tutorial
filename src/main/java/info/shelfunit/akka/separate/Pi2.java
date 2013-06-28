@@ -31,14 +31,13 @@ public class Pi2 {
 	System.out.println( "listener is a " + listener.getClass().getName() );
 	// create the master
 	ActorRef master = system.actorOf(new Props(new UntypedActorFactory() {
-		public UntypedActor create() {
+	    public UntypedActor create() {
 		    return new Master(nrOfWorkers, nrOfMessages, nrOfElements, listener);
-		}
-	    }), "master");
+	    }
+	}), "master");
 
 	// start the calculation
 	System.out.println( "master is a " + master.getClass().getName() );
 	master.tell(new Calculate());
-
     }
 }
