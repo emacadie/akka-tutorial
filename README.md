@@ -14,6 +14,7 @@ mvn exec:java -Dexec.mainClass="info.shelfunit.akka.Pi"
 
 mvn exec:java -Dexec.mainClass="info.shelfunit.akka.separate.Pi2"  
 mvn exec:java -Dexec.mainClass="info.shelfunit.akka.separate.PiRunner"  
+mvn exec:java -Dexec.mainClass="info.shelfunit.testing.TestingRunner"
 
 java -cp /home/ericm/.m2/repository/org/scala-lang/scala-library/2.9.1-1/scala-library-2.9.1-1.jar:\
 /home/ericm/.m2/repository/com/typesafe/akka/akka-actor/2.0.1/akka-actor-2.0.1.jar:\
