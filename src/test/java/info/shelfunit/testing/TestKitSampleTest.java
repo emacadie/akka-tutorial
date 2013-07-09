@@ -9,7 +9,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
-// import akka.testkit.JavaTestKit;
+import akka.testkit.JavaTestKit;
 import scala.concurrent.duration.Duration;
      
 public class TestKitSampleTest {
@@ -17,9 +17,11 @@ public class TestKitSampleTest {
 	ActorRef target = null;
 	public void onReceive(Object msg) {
 	    if (msg.equals("hello")) {
+		System.out.println("+++++++++++++++++ SomeActor got hello");
 		getSender().tell("world", getSelf());
 		if (target != null) target.forward(msg, getContext());
 	    } else if (msg instanceof ActorRef) {
+		System.out.println("+++++++++++++++++ SomeActor got ActorRef");
 		target = (ActorRef) msg;
 		getSender().tell("done", getSelf());
 	    }
@@ -34,7 +36,7 @@ public class TestKitSampleTest {
 	public static void teardown() {
 	system.shutdown();
     }
-    /*   
+   
     @Test
 	public void testIt() {
 	// Wrap the whole test procedure within a testkit constructor
@@ -77,7 +79,7 @@ public class TestKitSampleTest {
 	    };
 	}};
     }
-*/
+
 }
 
 
