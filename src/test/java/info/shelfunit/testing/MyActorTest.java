@@ -17,6 +17,11 @@ import akka.testkit.TestActorRef;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
+import akka.pattern.Patterns;
+import scala.concurrent.Future;
+import scala.concurrent.Await;
+import scala.concurrent.duration.Duration;
+
 
 /**
  *
@@ -65,6 +70,28 @@ public class MyActorTest {
 	// system.shutdown();
 	assertTrue( 1 == 1 );
     }
+
+
+        @Test
+	    public void giveSomeLoveToTestActorRef() {
+	    System.out.println("------------------------------");
+	    System.out.println("Starting giveSomeLoveToTestActorRef() {");
+	    ActorSystem system = ActorSystem.create("PiSystem");
+	    final Props props = new Props(MyActor.class);
+	    final TestActorRef<MyActor> ref = TestActorRef.create(system, props, "testB");
+	    final Future<Object> future = Patterns.ask(ref, "say42", 3000);
+	    assertTrue(future.isCompleted());
+	    try {
+		assertEquals(42, Await.result(future, Duration.Zero()));
+	    } catch ( Exception e ) {
+		e.printStackTrace();
+	    }
+	    System.out.println( "props.dispatcher(): " + props.dispatcher() );
+	    
+	    System.out.println( "at the end of giveSomeLovetoTestActorRef" );
+	    system.shutdown();
+	    assertTrue( 1 == 1 );
+	}
 
 
 } // end class MyActorTest

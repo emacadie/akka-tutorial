@@ -10,21 +10,24 @@
   <name>Akka Tutorial</name>
 
   <properties>
-    <akka.version>2.1.4</akka.version>
+    <akka.version>2.2.0-RC2</akka.version>
   </properties>
 
   <repositories>
+<!--
     <repository>
       <id>typesafe-releases</id>
       <url>http://repo.typesafe.com/typesafe/releases</url>
     </repository>
+-->
+<!--
     <repository>
       <id>Sonatype</id>
       <name>Sonatype Repsitory</name>
       <layout>default</layout>
       <url>http://repository.sonatype.org/content/repositories/central</url>
     </repository>
-
+-->
     <repository>
       <id>Maven</id>
       <url>http://repo1.maven.org/maven2/</url>
@@ -38,6 +41,7 @@
       <artifactId>akka-actor_2.10</artifactId>
       <version>${akka.version}</version>
     </dependency>
+
 
     <dependency>
       <groupId>com.typesafe.akka</groupId>
