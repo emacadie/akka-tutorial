@@ -38,7 +38,7 @@ public class PiRunner {
 
 	// start the calculation
 	System.out.println( "master is a " + master.getClass().getName() );
-	master.tell(new Calculate());
+	master.tell(new Calculate(), master);
 
     }
 }

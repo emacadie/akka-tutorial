@@ -17,7 +17,7 @@ public class TestingRunner {
 	System.out.println( "system is a " + systemClass.getName() );
 
 	final ActorRef myActor = system.actorOf(new Props(MyActor.class), "my-actor");
-	myActor.tell( "say42" );
+	myActor.tell( "say42", myActor );
     } // end doStuff
     
     public static void main( final String args[] ) {
